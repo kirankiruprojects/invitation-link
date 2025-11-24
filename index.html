@@ -1,212 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Gruhapravesha Invitation - Rathna Nilaya</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiran B S - Resume</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      background: linear-gradient(135deg, #fdf6e3, #e3f7ff);
-      background-size: 400% 400%;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      animation: bgMove 8s ease-in-out infinite alternate;
-      overflow-x: hidden;
-    }
-
-    @keyframes bgMove {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
-    }
-
-    /* Confetti / flower animation */
-    .confetti {
-      position: fixed;
-      top: -10px;
-      width: 10px;
-      height: 10px;
-      background-color: gold;
-      opacity: 0.8;
-      border-radius: 50%;
-      animation: fall 6s linear infinite;
-    }
-    @keyframes fall {
-      0% { transform: translateY(-10px) rotate(0deg); }
-      100% { transform: translateY(100vh) rotate(720deg); }
-    }
-
-    .invitation-card {
-      width: 100%;
-      max-width: 420px;
-      border-radius: 18px;
-      overflow: hidden;
+    .resume-container {
       background: #fff;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      animation: fadeIn 1.2s ease-out;
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px #ccc;
+      padding: 2em 1.2em 2.5em 1.2em;
+      margin-top: 3em;
+      margin-bottom: 3em;
+      font-size: 1.12em;
     }
-
-    .top-image {
-      width: 100%;
-      height: auto;
-      display: block;
-      animation: zoomIn 4s ease-in-out infinite alternate;
-    }
-
-    @keyframes zoomIn {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.05); }
-    }
-
-    /* Animated Heading */
-    .gold-text {
-      font-size: 1.8em;
-      color: #b28e17;
+    .header-name {
+      color: #273c75;
+      font-size: 2em;
       font-weight: 700;
-      text-align: center;
-      margin-top: 12px;
-      background: linear-gradient(90deg, #b28e17, #ffd700, #b28e17);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 3s linear infinite, bounceIn 1.5s ease-out;
     }
-    @keyframes shine {
-      to { background-position: 200% center; }
-    }
-    @keyframes bounceIn {
-      0% { transform: scale(0.8); opacity: 0; }
-      50% { transform: scale(1.1); opacity: 1; }
-      100% { transform: scale(1); }
-    }
-
-    .venue-highlight {
-      font-size: 1.4em;
-      color: #d48806;
-      font-weight: bold;
-      text-align: center;
-      margin: 8px 0;
-      animation: glow 2s infinite alternate;
-    }
-
-    .event-details {
-      background: #e8f8ff;
-      margin: 12px;
-      border-radius: 10px;
-      padding: 12px;
-      text-align: center;
-      color: #236483;
-      font-size: 1.05em;
-      animation: fadeUp 1.5s ease-in-out;
-    }
-
-    .btn-custom {
-      background-color: #ffd700;
-      color: #543413;
+    .header-role {
+      color: #077de1;
+      font-size: 1.16em;
       font-weight: 600;
-      margin: 10px auto;
-      display: block;
-      width: 90%;
-      border-radius: 8px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
     }
-    .btn-custom:hover {
-      background-color: #47b7ef;
-      color: #fff;
-      transform: scale(1.05);
+    h2 {
+      color: #176ca9;
+      font-size: 1.18em;
+      margin-top: 1.3em;
+      margin-bottom: 0.6em;
+      border-left: 4px solid #6d8cff;
+      padding-left: 0.5em;
+      font-weight: 700;
     }
-
-    .pulse-text {
-      color: #0077b6;
+    .section-card {
+      background: #f8fafc;
+      padding: 0.8em 1em;
+      border-radius: 0.7em;
+      margin-bottom: 1.2em;
+      box-shadow: 0 1px 4px #e8e8e8;
+    }
+    .badge-sk {
+      display: inline-block;
+      background: #e6f0fa;
+      color: #146189;
+      padding: 0.20em 1.1em;
+      margin: 0.18em 0.22em 0.18em 0;
+      border-radius: 13px;
+      font-size: 0.97em;
       font-weight: 600;
-      animation: pulse 2.5s infinite;
+      border: 1px solid #bdd1ec;
     }
-
-    .show-phone-btn {
-      display: block;
-      margin: 10px auto;
-      padding: 10px;
-      width: 75%;
-      background: #47b7ef;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: transform 0.3s ease, background-color 0.3s ease;
+    .profile-section {
+      border-bottom: 2px solid #dbdbdb;
+      margin-bottom: 1em;
+      padding-bottom: 1em;
     }
-    .show-phone-btn:hover {
-      background: #3498db;
-      transform: scale(1.05);
+    .contact a { color: #007bff; text-decoration: none; }
+    /* Custom media queries for background/font-size */
+    @media (max-width: 600px) {
+      .resume-container { background: #e0ffd6 !important; font-size: 1em !important; padding: 1em !important;}
+      h2 { font-size: 1.3em;}
     }
-
-    #phoneTab {
-      display: none;
-      text-align: center;
-      animation: fadeInPhones 0.6s ease-out;
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .resume-container { background: #fffbe6 !important; font-size: 1.09em !important;}
     }
-    #phoneTab.show {
-      display: block;
-      animation: fadeInPhones 0.6s ease-out;
+    @media (min-width: 1025px) {
+      .resume-container { background: white !important; font-size: 1.12em !important;}
     }
-
-    /* Animations */
-    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-    @keyframes fadeUp { from {transform: translateY(20px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
-    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-    @keyframes glow { 0% { text-shadow: 0 0 5px gold; } 100% { text-shadow: 0 0 15px orange; } }
-    @keyframes fadeInPhones { from {opacity: 0; transform: scale(0.9);} to {opacity: 1; transform: scale(1);} }
   </style>
 </head>
-<body>
-  <!-- Confetti elements -->
-  <script>
-    for(let i=0; i<20; i++){
-      let confetti = document.createElement('div');
-      confetti.className = 'confetti';
-      confetti.style.left = Math.random()*100 + 'vw';
-      confetti.style.backgroundColor = ['gold','#ff7f50','#ff69b4','#87cefa'][Math.floor(Math.random()*4)];
-      confetti.style.animationDuration = (Math.random()*3 + 3) + 's';
-      document.body.appendChild(confetti);
-    }
-  </script>
-
-  <div class="card invitation-card">
-    <img src="https://i.pinimg.com/736x/bb/36/6d/bb366d5751dcd4e2c8df0212c1ffea1e.jpg" class="top-image" alt="Gruhapravesha Ceremony" />
-    <div class="card-body">
-      <h2 class="gold-text">Housewarming Invitation</h2>
-      <div class="venue-highlight">🏠 Rathna Nilaya</div>
-      <div class="event-details">
-        Thursday, 14th August 2025<br>
-        Dastikola, Bilikere, Hunsur Taluk, Mysore District
+<body style="background: linear-gradient(135deg, #dae2f8 0%, #d6a4a4 100%); min-height:100vh;">
+  <div class="container">
+    <div class="resume-container mx-auto">
+      <!-- Header -->
+      <div class="row profile-section">
+        <div class="col-12 col-md-8">
+          <div class="header-name">Kiran B S</div>
+          <div class="header-role">Software Test Engineer</div>
+          <div class="contact mb-1">
+            <strong>Phone:</strong> 7899281642 &nbsp; | &nbsp;
+            <strong>Email:</strong> <a href="mailto:kiranbs627@gmail.com">kiranbs627@gmail.com</a>
+          </div>
+          <div class="contact mb-1">
+            <strong>Bangalore, India</strong> &nbsp; | &nbsp;
+            <a href="https://www.linkedin.com/in/kiran-b-s-180236259" target="_blank">LinkedIn/kiran-b-s-180236259</a>
+          </div>
+        </div>
       </div>
-      <a href="https://goo.gl/maps/uJuQpprGw7z16SMz6?g_st=aw" target="_blank" class="btn btn-custom">
-        📍 View Location on Google Maps
-      </a>
-      <p class="text-center mt-3">
-        We joyfully invite you and your family to our <em>Gruhapravesha</em>,<br>
-        seeking your blessings on this special occasion.<br>
-        <span class="pulse-text">Come make memories with us!</span>
-      </p>
-      <button class="show-phone-btn" onclick="togglePhones()">📞 Show Contact Numbers</button>
-      <div id="phoneTab">
-        <a href="tel:+917899281642" class="btn btn-outline-info btn-block mt-2">Call 7899281642</a>
-        <a href="tel:+917975962660" class="btn btn-outline-info btn-block mb-2">Call 7975962660</a>
+      <!-- Objective -->
+      <h2>Career Objective</h2>
+      <div class="section-card mb-3">
+        To pursue a highly challenging and creative career where I can apply my knowledge and creativity, acquire new skills, and contribute effectively to the organization.
+      </div>
+      <!-- Skills -->
+      <h2>Technical Skills</h2>
+      <div class="mb-2">
+        <div><strong>Programming Languages:</strong>
+          <span class="badge-sk">Java</span>
+        </div>
+        <div><strong>Frontend:</strong>
+          <span class="badge-sk">HTML</span>
+          <span class="badge-sk">CSS</span>
+          <span class="badge-sk">Bootstrap</span>
+        </div>
+        <div><strong>Testing Tools & Frameworks:</strong>
+          <span class="badge-sk">Selenium (Java)</span>
+          <span class="badge-sk">TestNG</span>
+        </div>
+        <div><strong>Database:</strong>
+          <span class="badge-sk">SQL</span>
+        </div>
+      </div>
+      <!-- Experience -->
+      <h2>Professional Experience</h2>
+      <div class="section-card mb-3">
+        <strong>Executive Testing Analyst</strong><br>
+        HR Governance India Private Limited<br>
+        <span class="text-secondary">April 2025 – November 2025 (7 months)</span>
+        <ul class="mb-0 mt-2">
+   
+          <li>Executed test cases, logged defects, and collaborated with development teams for timely bug fixes.</li>
+          <li>Focused on web application testing, requirements review, and ensuring high-quality deliverables.</li>
+          <li>Participated in test planning, execution, and reporting activities.</li>
+        </ul>
+      </div>
+      <!-- Education -->
+      <h2>Education</h2>
+      <div class="section-card mb-3">
+        <div><strong>B.E. in Computer Science and Engineering</strong><br>
+          Rajeev Institute of Technology, Hassan (2020-2024)<br>
+          <span style="color:#293;">CGPA: 8.0</span>
+        </div>
+        <div><strong>12th:</strong> Sheshadripuram PU College, Mysore (2019-2020) – 75%</div>
+        <div><strong>10th:</strong> Vidya Varidhi High School, Mysore (2017-2018) – 91.36%</div>
+      </div>
+      <!-- Projects -->
+      <h2>Projects</h2>
+      <div class="section-card mb-3">
+        <ul class="mb-0">
+          <li><strong>Library Management System:</strong> Developed a complete software application for automating library operations, with database integration and custom reporting.</li>
+          <li><strong>Automation Testing:</strong> Automated web application testing using Java, Selenium, and TestNG to deliver high-quality product releases.</li>
+        </ul>
+      </div>
+      <!-- Certifications -->
+      <h2>Certifications</h2>
+      <div>
+        <ul>
+          <li>Software Testing – Besant Technology, Rajaji Nagar</li>
+        </ul>
+      </div>
+      <!-- Profile Summary -->
+      <h2>Profile Summary</h2>
+      <div>
+        <ul>
+          <li>Excellent analytical and problem-solving ability</li>
+          <li>Strong verbal and written communication skills</li>
+          <li>Team player with logical reasoning and adaptability to new technologies</li>
+          <li>Willing to take on new challenges in test automation</li>
+        </ul>
+      </div>
+      <!-- Languages Known -->
+      <h2>Languages Known</h2>
+      <div>
+        <span class="badge-sk">Kannada</span> <span class="badge-sk">English</span>
       </div>
     </div>
   </div>
-
-  <script>
-    function togglePhones() {
-      document.getElementById('phoneTab').classList.toggle('show');
-    }
-  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
